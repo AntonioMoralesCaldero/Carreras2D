@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dklh7r3qkrfe8"]
+
+[ext_resource type="Script" uid="uid://biygbif4lcyr3" path="res://scripts/car.gd" id="1_c35m8"]
+
+[sub_resource type="Gradient" id="Gradient_qt2eu"]
+colors = PackedColorArray(0.992157, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_50v30"]
+gradient = SubResource("Gradient_qt2eu")
+width = 50
+height = 100
+fill_from = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtldb"]
+size = Vector2(36156, 26170)
+
+[node name="car" type="CharacterBody2D"]
+script = ExtResource("1_c35m8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(652, 244)
+scale = Vector2(-724.931, 260.443)
+texture = SubResource("GradientTexture2D_50v30")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(649, 307)
+shape = SubResource("RectangleShape2D_jtldb")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-181, 224)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
