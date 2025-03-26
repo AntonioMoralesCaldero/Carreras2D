@@ -1,18 +1,13 @@
 extends CharacterBody2D
 
-const SPEED = 300
+const SPEED = 300  # Velocidad del coche
 
 func _physics_process(delta):
-	var direction = Vector2.ZERO
-	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	var direction = 0
+	direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
-	if direction.length() > 0:
-		direction = direction.normalized()
-	
-	velocity = direction * SPEED
+	velocity = Vector2(direction * SPEED, 0)  # Movimiento solo en X
 	move_and_slide()
-
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("obstacles"):

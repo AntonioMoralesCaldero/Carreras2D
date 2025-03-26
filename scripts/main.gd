@@ -1,15 +1,13 @@
 extends Node2D
 
 @onready var obstacle_scene = preload("res://scenes/Obstacle.tscn")
-@onready var background = $Sprite2D
+@onready var parallax = $ParallaxBackground
 
-var bg_speed = 100
+
+var bg_speed = 175
 
 func _physics_process(delta):
-	background.position.y += bg_speed * delta
-	
-	if background.position.y >= background.texture.get_height():
-		background.position.y = 0
+	parallax.scroll_offset.y += bg_speed * delta
 
 func _on_timer_timeout():
 	var obstacle = obstacle_scene.instantiate()

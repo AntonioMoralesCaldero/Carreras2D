@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy4s3vcfnrghl"
-path="res://.godot/imported/obstaculo2.png-173a161fa6f42a42fee3b16306a57a74.ctex"
+uid="uid://cox1ftn6c05up"
+path="res://.godot/imported/obstaculo10.png-3f5f11d4dc9634459fb9ca8323ed59e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/obstaculo2.png"
-dest_files=["res://.godot/imported/obstaculo2.png-173a161fa6f42a42fee3b16306a57a74.ctex"]
+source_file="res://assets/obstaculo10.png"
+dest_files=["res://.godot/imported/obstaculo10.png-3f5f11d4dc9634459fb9ca8323ed59e8.ctex"]
 
 [params]
 

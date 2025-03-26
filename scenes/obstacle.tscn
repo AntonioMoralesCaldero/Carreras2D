@@ -1,21 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1g655v2fwyjw"]
 
 [ext_resource type="Script" uid="uid://d3mcgnbiu6lyb" path="res://scripts/obstacle.gd" id="1_7ukg5"]
-[ext_resource type="Texture2D" uid="uid://hu4i4ma4awig" path="res://assets/obstaculo2.png" id="2_drdry"]
+[ext_resource type="Texture2D" uid="uid://cdyp24vhdxl3t" path="res://assets/obstaculo5.png" id="2_drdry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drdry"]
-size = Vector2(89.5035, 46.0035)
+size = Vector2(89.5035, 43.9997)
 
 [node name="Obstacle" type="Area2D" groups=["obstacles"]]
 script = ExtResource("1_7ukg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["obstacles"]]
-position = Vector2(1.70799, 1.14124)
-rotation = 6.28456
-scale = Vector2(0.142416, 0.139936)
+position = Vector2(3.29166, -1.41668)
+rotation = 3.14422
+scale = Vector2(0.261247, 0.248388)
 texture = ExtResource("2_drdry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3.00094, -1.74826)
+position = Vector2(2.99904, -1.74827)
 rotation = 1.5746
 shape = SubResource("RectangleShape2D_drdry")
