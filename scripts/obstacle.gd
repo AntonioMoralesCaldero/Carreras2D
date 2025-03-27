@@ -2,7 +2,8 @@ extends Area2D
 
 @onready var sprite = $Sprite2D
 
-var speed = 250
+var speed = 600
+
 var textures = [ 
 	preload("res://assets/obstaculo2.png"),
 	preload("res://assets/obstaculo3.png"),
@@ -22,7 +23,9 @@ var textures = [
 ]
 
 func _ready():
+	add_to_group("obstacles")  # Add every obstacle spawned to the group obstacles
 	sprite.texture = textures[randi() % textures.size()]
+
 
 func _physics_process(delta):
 	position.y += speed * delta

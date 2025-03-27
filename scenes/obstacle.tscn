@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cdyp24vhdxl3t" path="res://assets/obstaculo5.png" id="2_drdry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drdry"]
-size = Vector2(89.5035, 43.9997)
+size = Vector2(95.9004, 54.0034)
 
 [node name="Obstacle" type="Area2D" groups=["obstacles"]]
 script = ExtResource("1_7ukg5")
@@ -16,6 +16,6 @@ scale = Vector2(0.261247, 0.248388)
 texture = ExtResource("2_drdry")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.99904, -1.74827)
+position = Vector2(2.81913, -0.947437)
 rotation = 1.5746
 shape = SubResource("RectangleShape2D_drdry")
