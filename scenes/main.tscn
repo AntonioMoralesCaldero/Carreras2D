@@ -68,5 +68,13 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 75
 text = "Retry"
 
+[node name="SurvivalTimeLabel" type="Label" parent="GameOverScreen"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "	\"00:00\""
+vertical_alignment = 1
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="GameOverScreen/RetryButton" to="." method="_on_retry_button_pressed"]
